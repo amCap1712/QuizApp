@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <!---Add questions string resources-->
+    <string name="question_1">1) Which of the following mathematicians invented Boolean Algebra?</string>
+    <string name="question_2">2) Which data structure is commonly used in process of caching?</string>
+    <string name="question_3">3) Which searching algorithm has best time complexity given that the data is sorted?</string>
+    <!---Add choices for first question-->
+    <string name="question_1_choice_1">Leonhard Euler</string>
+    <string name="question_1_choice_2">George Boole</string>
+    <string name="question_1_choice_3">Claude Shannon</string>
+    <!---Add choices for second question-->
+    <string name="question_2_choice_1">Hash Table</string>
+    <string name="question_2_choice_2">Binary Tree</string>
+    <string name="question_2_choice_3">Heap</string>
+    <!---Add choices for third question-->
+    <string name="question_3_choice_1">Binary Search</string>
+    <string name="question_3_choice_2">Linear Search</string>
+    <string name="question_3_choice_3">Selection Search</string>
+</resources>
