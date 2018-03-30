@@ -36,31 +36,22 @@ public class MainActivity extends AppCompatActivity {
     public void getMyDataSet() {
         //declare string array
         myDataSet = new String[3][5];
-        //loop to populate array by dynamically generating string resource ids
-        for(int i=0;i<3;i++){
-            //questionID to generate string resource ID of each question string
-            //each string question resource is of form question_<Question number>
-            String questionID = "question_";
-            questionID += String.valueOf(i+1);
-            //get resource ID of string dynamically
-            int resID = getResources().getIdentifier(questionID,"string",getPackageName());
-            //add question to the array
-            myDataSet[i][0] = getResources().getString(resID);
-            // loop to fill choices in the array
-            for(int j=1;j<4;j++) {
-                //answerID to generate each answer choice resource ID
-                //each string answer resource ID is of form question_<QuestionNumber>_choice_<ChoiceNumber>
-                String answerID = questionID + "_choice_";
-                answerID += String.valueOf(j);
-                //get resource ID of string choice dynamically
-                resID = getResources().getIdentifier(answerID,"string",getPackageName());
-                //add choice to array
-                myDataSet[i][j] = getResources().getString(resID);
+        //obtain questions
+        String questions[] = getResources().getStringArray(R.array.questions);
+        //obtain choices
+        String choices[] = getResources().getStringArray(R.array.choices);
+        int choiceNumber = 0;
+        //loop to fill questions and answers
+        for(int i=0;i<3;i++) {
+            myDataSet[i][0] = questions[i];
+            for (int j = 1; j < 4; j++) {
+                myDataSet[i][j] = choices[choiceNumber];
+                choiceNumber++;
             }
+        }
             //add correct answers to array for validation
             myDataSet[0][4] = String.valueOf(R.id.choice2);
             myDataSet[1][4] = String.valueOf(R.id.choice1);
             myDataSet[2][4] = String.valueOf(R.id.choice1);
-        }
     }
 }

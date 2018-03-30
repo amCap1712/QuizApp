@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item>1) Which of the following mathematicians invented Boolean Algebra?</item>
+        <item>2) Which data structure is commonly used in process of caching?</item>
+        <item>3) Which searching algorithm has best time complexity given that the data is sorted?</item>
+    </string-array>
+    <string-array name="choices">
+        <item>Leonhard Euler</item>
+        <item>George Boole</item>
+        <item>Claude Shannon</item>
+        <item>Hash Table</item>
+        <item>Binary Tree</item>
+        <item>Heap</item>
+        <item>Binary Search</item>
+        <item>Linear Search</item>
+        <item>Selection Search</item>
+    </string-array>
+</resources>
